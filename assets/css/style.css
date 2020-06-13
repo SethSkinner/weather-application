@@ -1,0 +1,15 @@
+.jumbo1 {
+    font-size: 4em;
+}
+
+.navbar{
+    justify-content: center;
+}
+
+.card {
+    margin: 2px;
+}
+
+#cities {
+    justify-content: center;
+}
