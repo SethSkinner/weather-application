@@ -16,72 +16,67 @@
 <body>
 
     <main>
-        <header class='jumbotron text-center font-weight-bold jumbo1' >Weather Dashboard</header>
+        <header class='jumbotron text-center font-weight-bold jumbo1 text' >Weather Dashboard</header>
         <div class='row'>
-                <div class='col-sm-4 jumbrotron'>
-                    <h2 class='text-center'>Search for a city:</h2>
-                    <nav class="navbar navbar-light bg-light">
-                        <form class="form-inline">
-                          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><span class="fa fa-search"></span></button>
-                        </form>
-                      </nav>
-                      <div class='btn-div'></div>
-                    <div id='cities'></div>  
-                </div>
-                <div class='col-sm-8'>
-                    <div class="row jumbotron">
-                        <div class='col-md-10'>
-                            <h1 id='City name and date'>4</h1>
-                            <h4 id='Temp'>4</h4>
-                            <h4 id='humidity'>4</h4>
-                            <h4 id='wind-speed'>4</h4>
-                            <h4 id='uv-index'>4</h4>
-                        </div>
-                    </div>
-                    <div class="row jumbotron">
-                        <div class="card" style="width: 15rem; height: 15rem;">
-                            <img class="card-img-top" src="..." alt="Card image cap">
-                            <div class="card-body">
-                              <h5 class="card-title"></h5>
-                              <p class="card-text"></p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                          </div><div class="card" style="width: 15rem; height: 15rem;">
-                            <img class="card-img-top" src="..." alt="Card image cap">
-                            <div class="card-body">
-                              <h5 class="card-title"></h5>
-                              <p class="card-text"></p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                          </div>
-                          <div class="card" style="width: 15rem; height: 15rem;">
-                            <img class="card-img-top" src="..." alt="Card image cap">
-                            <div class="card-body">
-                              <h5 class="card-title"></h5>
-                              <p class="card-text"></p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                          </div>
-                          <div class="card" style="width: 15rem; height: 15rem;">
-                            <img class="card-img-top" src="..." alt="Card image cap">
-                            <div class="card-body">
-                              <h5 class="card-title"></h5>
-                              <p class="card-text"></p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                          </div>
-                          <div class="card" style="width: 15rem; height: 15rem;">
-                            <img class="card-img-top" src="..." alt="Card image cap">
-                            <div class="card-body">
-                              <h5 class="card-title"></h5>
-                              <p class="card-text"></p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                          </div>  
-                    </div>    
-                </div>
-        </div>
+          <div class='col-sm-4 jumbrotron'>
+            <h2 class='text-center text'>Search for a city:</h2>
+              <nav class="navbar">
+                <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit"><span class="fa fa-search"></span></button>
+                </form>
+              </nav>
+                <div>
+                  <ul id='cities'></ul>
+                </div>  
+          </div>
+          <div class='col-sm-8'>
+            <div class="row jumbotron text">
+              <div class='col-md-12 text-center'>
+                <h2 id='weather-heading'>name of city here</h2>
+                <div id='div1'></div>
+                <div id='div2'></div>
+                <div id='div3'></div>
+                <div id='div4'></div>
+              </div>
+            </div>
+            <div class="row jumbotron text-center text">
+              <h2 class="text-center col-md-12"><b>5-Day Forcast</b></h2>
+              <div class="card" style="width: 15rem; height: 15rem;">
+                <div id='date1 text-center'></div>
+                <div id='icon1 text-center'></div>
+                <div id='temp1 text-center'></div>
+                <div id='hum1 text-center'></div>
+              </div>  
+              <div class="card" style="width: 15rem; height: 15rem;">
+                <div id='date2 text-center'></div>
+                <div id='icon2 text-center'></div>
+                <div id='temp2 text-center'></div>
+                <div id='hum2 text-center'></div>
+              </div>
+              <div class="card" style="width: 15rem; height: 15rem;">
+                <div id='date3 text-center'></div>
+                <div id='icon3 text-center'></div>
+                <div id='temp3 text-center'></div>
+                <div id='hum3 text-center'></div>
+              </div>
+              <div class="card" style="width: 15rem; height: 15rem;">
+                <div id='date4 text-center'></div>
+                <div id='icon4 text-center'></div>
+                <div id='temp4 text-center'></div>
+                <div id='hum4 text-center'></div>
+              </div>
+              <div class="card" style="width: 15rem; height: 15rem;">
+                <div id='date5 text-center'></div>
+                <div id='icon5 text-center'></div>
+                <div id='temp5 text-center'></div>
+                <div id='hum5 text-center'></div>
+              </div>  
+            </div>    
+          </div>
+        </div> 
+        <div class="footer">
+          <p>Made by @SethSkinner</p>
         </div>
     </main>
     
