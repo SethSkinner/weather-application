@@ -13,7 +13,7 @@ search();
 function start(){
     var saved_cities = JSON.parse(localStorage.getItem("cities"));
     if (saved_cities !== null){
-        cities = saved_cities
+        cities = saved_cities;
     }   
     prependBtns(); 
 }
@@ -46,18 +46,18 @@ $(".addedBtns").on("click", function(event){
     event.preventDefault();
     city = $(this).text().trim();
 APIcalls(); 
-})
+});
 }
 
 function search() {
 $("#searchbtn").on("click", function(event){
     event.preventDefault();
-    city = $(this).prev().val().trim()
+    city = $(this).prev().val().trim();
     
     cities.push(city);
 
     if(cities.length > 8){
-        cities.shift()
+        cities.shift();
     }
     if (city == ""){
         return; 
@@ -66,7 +66,7 @@ $("#searchbtn").on("click", function(event){
     APIcalls();
     storeCities(); 
     prependBtns();
-})
+});
 }
 function APIcalls(){
     
@@ -108,14 +108,26 @@ function APIcalls(){
          url:weatherUrl,
          method: "GET", 
      }).then(function(current_data){
-         var temp = Math.round(((current_data.main.temp - 273.15) * 9/5 + 32))
+         var temp = Math.round(((current_data.main.temp - 273.15) * 9/5 + 32));
          $("#temp1").text("Temperature: " + temp + String.fromCharCode(176)+"F");
          $("#humidity1").text("Humidity: " + current_data.main.humidity);
          $("#windspeed1").text("Wind Speed: " + current_data.wind.speed);
          $("#icon1").attr({"src": "http://openweathermap.org/img/w/" + current_data.weather[0].icon + ".png",
           "height": "100px", "width":"100px"});
      })
-    
 
+     var lat = response.city.coord.lat;
+     var lon = response.city.coord.lon;
+ 
+     var apiKey1 = "ada1f715672a438e9b9acaa7ea0e930b";
+     var queryURL2 = `https://api.openweathermap.org/data/2.5/uvi?appid=${apiKey1}&lat=${lat}&lon=${lon}`;
+ 
+     $.ajax({
+         url: queryURL2,
+         method: "GET",
+     }).then(function (res) {
+         var uvI = res.value;
+         $(".uvIndex").text("UV Index: " + uvI);
+     });
 }
 
