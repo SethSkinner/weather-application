@@ -8,7 +8,6 @@
     <link rel="stylesheet" href='assets/css/style.css'>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="assets/script/srcipt.js"></script>
-    <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <title>Document</title>
@@ -17,68 +16,69 @@
 
     <main>
         <header class='jumbotron text-center font-weight-bold jumbo1 text' >Weather Dashboard</header>
+        
         <div class='row'>
           <div class='col-sm-4 jumbrotron'>
             <h2 class='text-center text'>Search for a city:</h2>
               <nav class="navbar">
                 <form class="form-inline">
                   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit"><span class="fa fa-search"></span></button>
+                    <button class="btn btn-outline-secondary my-2 my-sm-0" id="searchbtn" type="submit"><span class="fa fa-search"></span></button>
                 </form>
               </nav>
-                <div>
-                  <ul id='cities'></ul>
+                <div id="btnContainer" class="jumbotron">
                 </div>  
           </div>
           <div class='col-sm-8'>
             <div class="row jumbotron text">
               <div class='col-md-12 text-center'>
-                <h2 id='weather-heading'>name of city here</h2>
-                <div id='div1'></div>
-                <div id='div2'></div>
-                <div id='div3'></div>
-                <div id='div4'></div>
+                <h2 id='city'></h2>
+                <div id='temp1'></div>
+                <div id='humidity1'></div>
+                <div id='windspeed1'></div>
+                <img id="icon1" src="">
               </div>
+            <div class='row icon-1'></div>  
             </div>
             <div class="row jumbotron text-center text">
               <h2 class="text-center col-md-12"><b>5-Day Forcast</b></h2>
               <div class="card" style="width: 15rem; height: 15rem;">
-                <div id='date1 text-center'></div>
-                <div id='icon1 text-center'></div>
-                <div id='temp1 text-center'></div>
-                <div id='hum1 text-center'></div>
+                <div id='0date' class='text-center'></div>
+                <img id='0icons' class='text-center'></img>
+                <div id='0temps' class='text-center'></div>
+                <div id='0humidities' class='text-center'></div>
               </div>  
               <div class="card" style="width: 15rem; height: 15rem;">
-                <div id='date2 text-center'></div>
-                <div id='icon2 text-center'></div>
-                <div id='temp2 text-center'></div>
-                <div id='hum2 text-center'></div>
+                <div id='1date' class='text-center'></div>
+                <img src="" id='1icons' class='text-center'></img>
+                <div id='1temps' class='text-center'></div>
+                <div id='1humidities' class='text-center'></div>
               </div>
               <div class="card" style="width: 15rem; height: 15rem;">
-                <div id='date3 text-center'></div>
-                <div id='icon3 text-center'></div>
-                <div id='temp3 text-center'></div>
-                <div id='hum3 text-center'></div>
+                <div id='2date' class='text-center'></div>
+                <img src="" id='2icons' class='text-center'></img>
+                <div id='2temps' class='text-center'></div>
+                <div id='2humidities' class='text-center'></div>
               </div>
               <div class="card" style="width: 15rem; height: 15rem;">
-                <div id='date4 text-center'></div>
-                <div id='icon4 text-center'></div>
-                <div id='temp4 text-center'></div>
-                <div id='hum4 text-center'></div>
+                <div id='3date' class='text-center'></div>
+                <img src="" id='3icons' class='text-center'></img>
+                <div id='3temps' class='text-center'></div>
+                <div id='3humidities' class='text-center'></div>
               </div>
               <div class="card" style="width: 15rem; height: 15rem;">
-                <div id='date5 text-center'></div>
-                <div id='icon5 text-center'></div>
-                <div id='temp5 text-center'></div>
-                <div id='hum5 text-center'></div>
-              </div>  
+                <div id='4date' class='text-center'></div>
+                <img id='4icons' class='text-center'></img>
+                <div id='4temps' class='text-center'></div>
+                <div id='4humidities' class='text-center'></div>
+              </div>
             </div>    
           </div>
         </div> 
-        <div class="footer">
+        <div class="footer"> 
           <p>Made by @SethSkinner</p>
         </div>
     </main>
-    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </body>
 </html>

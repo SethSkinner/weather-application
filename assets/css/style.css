@@ -10,14 +10,24 @@
     justify-content: center;
 }
 
+.searched_cities_container{
+     justify-content: center;
+     text-align: center;
+}
+
 .card {
     margin: 2px;
     background-color: #08444d;
+    justify-content: center;
 }
 
 #cities {
     justify-content: center;
 }
+
+#0icons, #1icons, #2icons, #3icons, #4icons {
+    height: 8em;
+} 
 
 .card {
     border-top-left-radius: 15px;
