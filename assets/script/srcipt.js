@@ -34,7 +34,8 @@ function prependBtns(){
         var btn = document.createElement("button");
         btn.textContent = cityName; 
         btn.setAttribute("class", "addedBtns"); 
-
+        btn.setAttribute('class', 'btn-primary')
+        
         citiesDiv.appendChild(btn);
         btnFunction();
       }
