@@ -1,3 +1,4 @@
+//elements to be user
 var city=""; 
 var url="";
 var APIkey="";
@@ -5,11 +6,11 @@ var queryurl ="";
 var currenturl = "";
 var citiesDiv = document.querySelector('#btnContainer');
 var cities = []; 
-
+//calling functions that will start the program
 start(); 
 btnFunction(); 
 search(); 
-
+/*function to start saving variables and prepending btns*/
 function start(){
     var saved_cities = JSON.parse(localStorage.getItem("cities"));
     if (saved_cities !== null){
@@ -17,11 +18,11 @@ function start(){
     }   
     prependBtns(); 
 }
-
+//functions to store the cities
 function storeCities(){
     localStorage.setItem("cities", JSON.stringify(cities)); 
 }
-
+//function to prepend btns
 function prependBtns(){
     citiesDiv.innerHTML = ""; 
     if(cities == null){
@@ -39,7 +40,7 @@ function prependBtns(){
         btnFunction();
       }
     }
-
+//function that will make the previous searchs appear on btns
 function btnFunction(){
 $(".addedBtns").on("click", function(event){
 
@@ -48,7 +49,7 @@ $(".addedBtns").on("click", function(event){
 APIcalls(); 
 });
 }
-
+//function on click event for the search btn
 function search() {
 $("#searchbtn").on("click", function(event){
     event.preventDefault();
@@ -68,6 +69,7 @@ $("#searchbtn").on("click", function(event){
     prependBtns();
 });
 }
+//function for the api calls
 function APIcalls(){
     
     url = "https://api.openweathermap.org/data/2.5/forecast?q=";    
@@ -84,13 +86,12 @@ function APIcalls(){
     }).then(function(response){
         var days = 0; 
         
-        //iterate through the 40 weather data sets
+        //loops through data
         for(var i=0; i< response.list.length; i++){
             
-            //split function to isolate the time from the time/data aspect of weather data, and only select weather reports for 3pm
             if(response.list[i].dt_txt.split(" ")[1] == "15:00:00")
             {
-    
+                //putting data onto the elements on the page in current day div
                 var day = response.list[i].dt_txt.split("-")[2].split(" ")[0];
                 var month = response.list[i].dt_txt.split("-")[1];
                 var year = response.list[i].dt_txt.split("-")[0];
@@ -103,7 +104,7 @@ function APIcalls(){
                         }   
         }
     });
-
+    //ajax putting 5 day forecast into elements
      $.ajax({
          url:weatherUrl,
          method: "GET", 
@@ -115,7 +116,7 @@ function APIcalls(){
          $("#icon1").attr({"src": "http://openweathermap.org/img/w/" + current_data.weather[0].icon + ".png",
           "height": "100px", "width":"100px"});
      })
-
+     //uv index calls for page
      var lat = response.city.coord.lat;
      var lon = response.city.coord.lon;
  
