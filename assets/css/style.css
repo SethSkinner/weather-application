@@ -2,6 +2,32 @@
     font-size: 4em;
 }
 
+.btn-group1 button {
+    background-image: linear-gradient(to right, black,#62dff0);
+    border: 1px solid black;
+    color: white;
+    padding: 10px 24px;
+    cursor: pointer;
+    width: 50%;
+    display: block; 
+  }
+  
+  .btn-group1 button:not(:last-child) {
+    border-bottom: none;
+  }
+
+  .search {
+      margin-left: 3em;
+  }
+
+  button {
+      margin-left: 8em;
+  }
+  
+  .btn-group1 button:hover {
+    background-color: black;
+  }
+
 .jumbotron {
     background-image: linear-gradient(to right, black,#62dff0);
 }
