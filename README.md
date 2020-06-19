@@ -5,7 +5,13 @@ to be accessed quickly by the user in a search list. it will show an icon that w
 
 # changes made
 ---------------
-
+1) made divs for all the placement of elements needed
+2) add styling with bootstrap
+3) added search bar for user input
+4) made elements to be used in JS
+5) created ajax call to get data for weather
+6) used objects in data pulled by ajax to insert data on page
+7) used local storage to store searchs
 # screenshot
 -------------
 ![Image of App](https://photos.google.com/photo/AF1QipPt-kIPq7HlJlUjU63ZKNc5BX-pdrH2FxTgA0Ui)
